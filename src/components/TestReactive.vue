@@ -2,6 +2,7 @@
   <dev class="app">
       <h1> 一辆{{car.brand}}车，价值{{car.price}}</h1>
       <button @click="changePrice">修改价格</button><br/>
+      <button @click="changeCar">修改品牌</button><br/>
       <h2>游戏列表</h2>
       <ul>
         <li v-for="g in games" :key="g.id">
@@ -34,6 +35,10 @@
   function changeObj(){
     obj.a.b.c.d +=1
   }
+  function changeCar(){
+    Object.assign(car,{brand:'三林',price:"汽车名称"})
+  }
+
 
 </script>
 <style>
