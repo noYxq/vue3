@@ -26,7 +26,14 @@ const  router = createRouter({
                     //子级不需要斜杠
                     name:'detail',
                     path:'detail/:id/:title/:content',//param只能单个参数不能传obj和数组
-                    component:Detail
+                    component:Detail,
+                    //将路由收到的params参数作为props传给detail界面
+                    // props:true 
+                    //程序员自定义
+                    props(route){
+                        return route.query
+                    }
+
                 }
             ]
         },
