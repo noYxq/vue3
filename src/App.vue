@@ -2,9 +2,11 @@
   <dev class="app">
     <h2 class="title">vue路由测试</h2>
     <div class = "navigate">
+      <!--第二种：路径跳转-->
       <RouterLink :to="{path:'/home'}" active-class="active">首页</RouterLink>
-      <!-- <RouterLink to="/home" active-class="active">首页</RouterLink> -->
-      <RouterLink to="/news" active-class="active">新闻</RouterLink>
+      <!--第二种：名字跳转-->
+      <RouterLink :to="{name:'xinwen'}" active-class="active">新闻</RouterLink>
+      <!--第一种-->
       <RouterLink to="/about" active-class="active">关于</RouterLink>
     </div>
     <div class="main-content">
@@ -59,7 +61,7 @@ import {RouterView,RouterLink} from 'vue-router'
   margin: 0 auto;
   margin-top: 30px;
   border-radius: 10px;
-  width: 90%;
+  width: 100%;
   height: 400px;
   border:1px solid;
 }

@@ -7,3 +7,4 @@
 history模式：createWebHistory
 hash模式: createWebHashHistory
 
+5、v3s 空白vue文件生成vue代码

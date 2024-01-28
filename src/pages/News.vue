@@ -1,17 +1,30 @@
 <template>
     <dev class="news"> 
         <ul>
-            <li herf="#">新闻001</li>
-            <li herf="#">新闻002</li>
-            <li herf="#">新闻003</li>
-            <li herf="#">新闻004</li>
-            <li herf="#">新闻005</li>
+            <li v-for = "news in newList" :key="news.id">
+                <RouterLink to="/news/detail">{{news.content}}</RouterLink>
+            </li>
         </ul>
+    <div class="news-content">
+        <RouterView></RouterView>
+    </div>
     </dev>
 </template>
 
 <script lang="ts" setup name="news">
-  
+  import {reactive} from 'vue'
+  import {RouterView,RouterLink} from 'vue-router'
+  const newList = reactive([
+    {id:'1',title:'京东生鲜',content:'西兰花'},
+    {id:'2',title:'京东家电',content:'洗衣机'},
+    {id:'3',title:'秒杀',content:'miaosha'},
+    {id:'4',title:'京东手机',content:'小米'},
+    {id:'5',title:'电子数码',content:'pencil'},
+    {id:'6',title:'进口好物',content:'爱马仕'},
+    {id:'7',title:'拍卖',content:'秦朝砖'},
+    {id:'8',title:'plus会员',content:'100券'},
+    {id:'9',title:'京东五金城',content:'公牛插座'}
+  ])
 </script>
 <style scoped>
     .news{

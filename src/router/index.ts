@@ -1,9 +1,10 @@
 //创建路由器，暴露出去
 import {createRouter,createWebHistory,
 createWebHashHistory} from 'vue-router'
-import Home from '@/pages/home.vue'
-import News from '@/pages/news.vue'
+import Home from '@/pages/Home.vue'
+import News from '@/pages/News.vue'
 import About from '@/pages/About.vue'
+import Detial from '@/pages/Detail.vue'
 
 
 //创建路由器
@@ -12,14 +13,24 @@ const  router = createRouter({
     //createWebHashHistory
     history:createWebHistory(),
         routes:[{
+            name: 'zhuye',
             path:'/home',
             component:Home
         },
-        {
+        {   
+            name:'xinwen',
             path:'/news',
-            component:News
+            component:News,
+            children:[
+                {
+                    //子级不需要斜杠
+                    path:'detail',
+                    component:Detial
+                }
+            ]
         },
         {
+            name:'guanyu',
             path:'/about',
             component:About
         },
