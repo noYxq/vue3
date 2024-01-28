@@ -2,7 +2,21 @@
     <dev class="news"> 
         <ul>
             <li v-for = "news in newList" :key="news.id">
-                <RouterLink to="/news/detail">{{news.content}}</RouterLink>
+                <!-- query方法1-->
+                <!-- <RouterLink :to="`/news/detail?id=${news.id}
+                &title=${news.title}&content=${news.content}`"> -->
+                <!--query 方法2-->
+                <RouterLink 
+                :to="{path:'detail',//path值可以用/new/detail取代
+                query:{
+                    id:news.id,
+                    title:news.title,
+                    content:news.content
+                }
+            }"    
+                >
+                    {{news.content}}
+                </RouterLink>
             </li>
         </ul>
     <div class="news-content">
@@ -35,8 +49,12 @@
     }
     .news ul{
         margin-top: 30px;
-        list-style: node;
+        /** **/
+        /* list-style: none; */
         padding-left: 10px;
+    }
+    .news ul::marker{
+        color: #64967E;
     }
     .news li>a {
         font-size: 18px;

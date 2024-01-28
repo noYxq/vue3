@@ -24,6 +24,7 @@ const  router = createRouter({
             children:[
                 {
                     //子级不需要斜杠
+                    name:'detail',
                     path:'detail',
                     component:Detial
                 }
