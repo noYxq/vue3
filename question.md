@@ -1,0 +1,1 @@
+1、 window.addEventListener 获取节点，公司用来做什么？埋点
