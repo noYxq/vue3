@@ -4,7 +4,7 @@ createWebHashHistory} from 'vue-router'
 import Home from '@/pages/Home.vue'
 import News from '@/pages/News.vue'
 import About from '@/pages/About.vue'
-import Detial from '@/pages/Detail.vue'
+import Detail from '@/pages/Detail.vue'
 
 
 //创建路由器
@@ -25,8 +25,8 @@ const  router = createRouter({
                 {
                     //子级不需要斜杠
                     name:'detail',
-                    path:'detail',
-                    component:Detial
+                    path:'detail/:id/:title/:content',//param只能单个参数不能传obj和数组
+                    component:Detail
                 }
             ]
         },

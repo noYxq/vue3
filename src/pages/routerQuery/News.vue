@@ -2,13 +2,13 @@
     <dev class="news"> 
         <ul>
             <li v-for = "news in newList" :key="news.id">
-                <!-- param方法1-->
-                <!-- <RouterLink :to="`/news/detail/${news.id}
-                /${news.title}/${news.content}`"> -->
-                <!--param 方法2:链接前面是name，params不是query-->
+                <!-- query方法1-->
+                <!-- <RouterLink :to="`/news/detail?id=${news.id}
+                &title=${news.title}&content=${news.content}`"> -->
+                <!--query 方法2-->
                 <RouterLink 
-                :to="{name:'detail',//path值可以用/new/detail取代
-                params:{
+                :to="{path:'detail',//path值可以用/new/detail取代
+                query:{
                     id:news.id,
                     title:news.title,
                     content:news.content
