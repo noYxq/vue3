@@ -6,7 +6,8 @@
       <!-- <TestComputedVue/> -->
       <!-- <TestWatchVue/> -->
       <!-- <TestLifeCycleVue/> -->
-      <TestwatchEffectVue/>
+      <!-- <TestwatchEffectVue/> -->
+      <TesttoRefsVue/>
     </dev>
 </template>
 
@@ -20,6 +21,7 @@ import TestComputedVue from './components/TestComputed.vue';
 import TestWatchVue from './components/TestWatch.vue';
 import TestLifeCycleVue from './components/TestLifeCycle.vue';
 import TestwatchEffectVue from './components/TestwatchEffect.vue';
+import TesttoRefsVue from './components/TesttoRefs.vue';
 
 
 
@@ -27,7 +29,7 @@ import TestwatchEffectVue from './components/TestwatchEffect.vue';
   name:'App',
   components:{TestRefValue,TestReactive,TestToRef,
     TestComputedVue,TestWatchVue,TestLifeCycleVue,
-    TestwatchEffectVue}
+    TestwatchEffectVue,TesttoRefsVue}
  }
 </script>
 
