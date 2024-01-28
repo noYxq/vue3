@@ -8,7 +8,7 @@
 
 <script>
 import { ref } from "vue";
-import usePoint from '../hook/usePoint.js'
+import usePoint from '../../hook/usePoint.js'
 export default {
     name:'',
     setup(){

@@ -1,38 +1,24 @@
 <template>
   <dev class="app">
-      <!-- <TestRefValue></TestRefValue> -->
-      <!-- <TestReactive></TestReactive> -->
-      <!-- <TestToRef/> -->
-      <!-- <TestComputedVue/> -->
-      <!-- <TestWatchVue/> -->
-      <!-- <TestLifeCycleVue/> -->
-      <!-- <TestwatchEffectVue/> -->
-      <TesttoRefsVue/>
+    <h2 ref="title2">您好</h2>
+    <button @click="showLog">测试</button>
+    <Person ref="ren"/>
+  
+    
     </dev>
 </template>
 
-<script lang="ts">
-import { toRef } from 'vue';
-//js/ts
-import TestReactive from './components/TestReactive.vue';
-import TestRefValue  from './components/TestRef.vue';
-import TestToRef from './components/ToRef.vue'
-import TestComputedVue from './components/TestComputed.vue';
-import TestWatchVue from './components/TestWatch.vue';
-import TestLifeCycleVue from './components/TestLifeCycle.vue';
-import TestwatchEffectVue from './components/TestwatchEffect.vue';
-import TesttoRefsVue from './components/TesttoRefs.vue';
-
-
-
- export default {
-  name:'App',
-  components:{TestRefValue,TestReactive,TestToRef,
-    TestComputedVue,TestWatchVue,TestLifeCycleVue,
-    TestwatchEffectVue,TesttoRefsVue}
- }
+<script lang="ts" setup name="App">
+import  Person from './components/Person.vue';
+import {ref} from 'vue'
+let title =ref()
+let ren = ref()
+function showLog(){
+  //保护部打印Person.vue的值
+  console.log(ren.value)
+}
 </script>
-
+  
 <style>
 /** 样式 */
 
