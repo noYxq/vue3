@@ -20,3 +20,42 @@
       
   </dev>
 </template>
+
+<script lang="ts" setup name="TestRef">
+  import {reactive, ref} from 'vue'
+import func from '../../vue-temp/vue-editor-bridge'
+  let car = ref({brand:'奔驰',price:100})
+  let games = ref([
+    {id:'wangzhe',name:'王者荣耀'},
+    {id:'yuanshen',name:'元神'}
+  ])
+  let temp = ref(1)
+  let obj =  ref({a:{b:{c:{d:0}}}})
+  function changePrice(){
+    car.value.price +=10
+    console.log(car.value.price)
+  }
+  function changeFirstGame(){
+    games.value[0].name = 'zhangwnag'
+  }
+  function changeObj(){
+    obj.value.a.b.c.d +=1
+  }
+  function changeBrand(){
+    car.value.brand='大众'
+  }
+  function changeCar(){
+    car.value = {brand:'三林',price:12}
+  }
+  function changeTemp(){
+    temp.value = 10
+  }
+
+</script>
+<style>
+  /** 样式 */
+  .app {
+    background-color: red;
+    font-size: 20px;
+  }
+</style>

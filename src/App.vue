@@ -2,7 +2,9 @@
   <dev class="app">
       <!-- <TestRefValue></TestRefValue> -->
       <!-- <TestReactive></TestReactive> -->
-      <TestToRef/>
+      <!-- <TestToRef/> -->
+      <!-- <TestComputedVue/> -->
+      <TestWatchVue/>
     </dev>
 </template>
 
@@ -12,9 +14,12 @@ import { toRef } from 'vue';
 import TestReactive from './components/TestReactive.vue';
 import TestRefValue  from './components/TestRef.vue';
 import TestToRef from './components/ToRef.vue'
+import TestComputedVue from './components/TestComputed.vue';
+import TestWatchVue from './components/TestWatch.vue';
+
  export default {
   name:'App',
-  components:{TestRefValue,TestReactive,TestToRef}
+  components:{TestRefValue,TestReactive,TestToRef,TestComputedVue,TestWatchVue}
  }
 </script>
 
