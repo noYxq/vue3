@@ -7,7 +7,8 @@
                 /${news.title}/${news.content}`"> -->
                 <!--param 方法2:链接前面是name，params不是query-->
                 <RouterLink 
-                :to="{name:'detail',//path值可以用/new/detail取代
+                :to="{
+                name:'detail',//path值可以用/new/detail取代
                 query:{
                     id:news.id,
                     title:news.title,
