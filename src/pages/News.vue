@@ -9,7 +9,7 @@
                 <RouterLink 
                 :to="{
                 name:'detail',//path值可以用/new/detail取代
-                query:{
+                params:{
                     id:news.id,
                     title:news.title,
                     content:news.content

@@ -31,7 +31,7 @@ const  router = createRouter({
                     // props:true 
                     //程序员自定义
                     props(route){
-                        return route.query
+                        return route.params
                     }
 
                 }
