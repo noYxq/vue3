@@ -12,3 +12,4 @@ hash模式: createWebHashHistory
 7、路由query形式：参数帮到链接上，detail页用useRoute拿到值，回显到标签
 8、mac vscode快捷键 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
 9、markdown 教程文档 https://iamhefang.cn/tutorials/markdown/
+10、不适用routerlink时用编程式路由导航：鼠标划过跳转，隔几秒后跳转

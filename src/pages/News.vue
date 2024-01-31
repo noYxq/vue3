@@ -2,6 +2,7 @@
     <dev class="news"> 
         <ul>
             <li v-for = "news in newList" :key="news.id">
+                <button @click="showNewsData(news)">查看想法</button>
                 <!-- param方法1-->
                 <!-- <RouterLink :to="`/news/detail/${news.id}
                 /${news.title}/${news.content}`"> -->
@@ -28,7 +29,7 @@
 
 <script lang="ts" setup name="news">
   import {reactive} from 'vue'
-  import {RouterView,RouterLink} from 'vue-router'
+  import {RouterView,RouterLink,useRouter} from 'vue-router'
   const newList = reactive([
     {id:'1',title:'京东生鲜',content:'西兰花'},
     {id:'2',title:'京东家电',content:'洗衣机'},
@@ -40,6 +41,24 @@
     {id:'8',title:'plus会员',content:'100券'},
     {id:'9',title:'京东五金城',content:'公牛插座'}
   ])
+  const router = useRouter()
+  //showNewsData参数限制
+  interface NewsInter{
+    id:string,
+    title:string,
+    content:string
+  }
+  function showNewsData(news:any){
+    //对象和字符串都可以用,与to写法一样
+    router.push({
+                name:'detail',//path值可以用/new/detail取代
+                params:{
+                    id:news.id,
+                    title:news.title,
+                    content:news.content
+                }
+            })
+  }
 </script>
 <style scoped>
     .news{
