@@ -15,18 +15,18 @@
     import {nanoid} from 'nanoid';
     import {usePersonStore} from '@/store/person';
     
+    const conststore  = usePersonStore()
     // let talkList = reactive([])
-    // async function get(){
+     function get(){
     //     //发请求,连续结构赋值+重命名
     //     let {data:{content:title}} = await axios.get('https://api.uomg.com/api/rand.qinghua?format=json')
     //     //响应包装为对象
-    //     let obj = {id:nanoid(),title}
+        // let obj = {id:nanoid(),title}
     //     console.log(obj)
     //     talkList.unshift(obj)
-        
-
-    // }
-    const conststore  = usePersonStore()
+    //方法三    
+     conststore.get()
+    }
 
 </script>
 
