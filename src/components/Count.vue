@@ -6,6 +6,7 @@
             <option value="2">2</option>
             <option value="3">3</option>
         </select>
+        <h2>语言:{{constore.language}}</h2>
         <button @click="add">加</button>
         <button @click="minus">减</button>
     </div>
@@ -32,6 +33,16 @@
     let n = ref(1)
     
     function add(){
+        //方法1:
+        // constore.sum +=1
+        //方法二
+        // constore.$patch({
+        //     sum:111,
+        //     language:'中文。。'
+        // })
+        //第三种
+        constore.increment(n.value)
+
     }
 
     function minus(){
