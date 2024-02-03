@@ -1,22 +1,14 @@
 <template>
   <dev class="app">
-    <h2 class="title">vue路由测试</h2>
-    <div class = "navigate">
-      <!--第二种：路径跳转-->
-      <RouterLink  :to="{path:'/home'}" active-class="active">首页</RouterLink>
-      <!--第二种：名字跳转-->
-      <RouterLink  :to="{name:'xinwen'}" active-class="active">新闻</RouterLink>
-      <!--第一种-->
-      <RouterLink  to="/about" active-class="active">关于</RouterLink>
-    </div>
-    <div class="main-content">
-      <RouterView/>
-    </div>
+    <Count></Count>
+    <person/>
   </dev>
 </template>
 
 <script lang="ts" setup name="App">
 import {RouterView,RouterLink} from 'vue-router'
+import Count from './components/Count.vue'
+import person from './components/person.vue';
 </script>
   
 <style>
