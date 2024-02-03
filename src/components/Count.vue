@@ -1,6 +1,6 @@
 <template>
     <div class="count">
-        <h2>当前求和为：{{sum}}</h2>
+        <h2>当前求和为：{{constore.sum}}</h2>
         <select v-model.number="n">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -13,15 +13,28 @@
 
  
 <script setup lang="ts" name="Count">
-    import {ref} from "vue"
+    import {ref,reactive} from "vue"
+    import {useCountStore} from '@/store/count';
+    const  constore = useCountStore()
+    let obj = reactive({
+        a:1,b:2,c:ref(3)
+    })
+    //ref必须value
+    let x = ref(9)
+   console.log(x.value)
+   console.log(obj.a)
+   console.log(constore.sum)
+   console.log(constore.$state.sum)
+
+
+
     let sum = ref(1)
     let n = ref(1)
+    
     function add(){
-        sum.value +=n.value
     }
 
     function minus(){
-        sum.value -=n.value
     }
 </script>
 
