@@ -14,18 +14,21 @@
 
  
 <script setup lang="ts" name="Count">
-    import {ref,reactive} from "vue"
+    import {ref,reactive, toRefs} from "vue"
     import {useCountStore} from '@/store/count';
+    import {storeToRefs} from 'pinia';
     const  constore = useCountStore()
     let obj = reactive({
         a:1,b:2,c:ref(3)
     })
+    //storeToRef只关注store中的数据，对方法不包裹
+    console.log("ceshi:",storeToRefs(constore))
     //ref必须value
     let x = ref(9)
    console.log(x.value)
-   console.log(obj.a)
-   console.log(constore.sum)
-   console.log(constore.$state.sum)
+//    console.log(obj.a)
+//    console.log(constore.sum)
+//    console.log(constore.$state.sum)
 
 
 

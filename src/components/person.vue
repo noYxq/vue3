@@ -14,8 +14,10 @@
     import axios from 'axios';
     import {nanoid} from 'nanoid';
     import {usePersonStore} from '@/store/person';
-    
+    import {storeToRefs} from 'pinia';    
     const conststore  = usePersonStore()
+    const {talkList} = storeToRefs(conststore)
+
     // let talkList = reactive([])
      function get(){
     //     //发请求,连续结构赋值+重命名
